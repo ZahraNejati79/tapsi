@@ -1,0 +1,27 @@
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* variables */
+:root {
+  --color-primary: #ff5722;
+  --color-secondary: #f8f8f8;
+  --color-light-secondary: #fff6f2;
+  --color-dark-secondary: #ffa589;
+  --color-hedings: #000000;
+  --color-body: #333333;
+}
+body {
+  color: var(--color-body);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-headigs);
+}
