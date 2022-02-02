@@ -1,0 +1,12 @@
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/Vazir.woff);
+}
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: 700;
+  src: url(/assets/fonts/Vazir-Bold.woff);
+}

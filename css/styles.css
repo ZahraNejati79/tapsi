@@ -173,3 +173,8 @@ h2 {
     grid-template-columns: repeat (3, 1fr);
   }
 }
+
+p {
+  font-family: Vazir;
+  font-weight: 400;
+}
