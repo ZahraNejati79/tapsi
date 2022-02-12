@@ -10,17 +10,22 @@
 /* variables */
 :root {
   --color-primary: #ff5722;
+  --color-second-primary: #ff7a50;
   --color-secondary: #f8f8f8;
+  --color-white: #fff;
   --color-light-secondary: #fff6f2;
   --color-dark-secondary: #ffa589;
   --color-hedings: #000000;
+  --color-black-secondary: #444242;
   --color-body: #333333;
 }
 html {
   font-size: 62.5%;
+  font-family: Vazir;
 }
 body {
   color: var(--color-body);
+  font-family: Vazir;
   font-size: 1.4rem;
   font-weight: 700;
 }
@@ -110,33 +115,29 @@ h2 {
 /* lists */
 .list {
   list-style: none;
-  font-size: 1.8rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 .list--inline .list__item {
   display: inline-block;
   margin-left: 2rem;
 }
-
-/* .list--tick .list__item::before {
-  content: "";
+/* .list .list__item::before {
+  content: " ";
   width: 20px;
-  height: 20px;
-  list-style-image: url(/assets/images/iconmonstr-checkbox-21.svg);
-  padding-right: 4rem;
-} */
-.list--tick .list__item {
-  background: url(/assets/images/iconmonstr-checkbox-21.svg) no-repeat right
-    center;
-  padding: 0.2rem 0px;
+  background-image: url(/assets/images/Tick-Square.svg);
+  background-position: center right;
+  background-repeat: no-repeat;
   padding-right: 3rem;
-  margin: 1rem;
-}
-
-/* #list {
-  list-style-image: url(/assets/images/iconmonstr-checkbox-21.svg);
-  padding-right: 4rem;
+  font-size: 1.5rem;
 } */
+.list .list__item {
+  background-image: url("/assets/images/Tick-Square.svg");
+  background-position: center right;
+  background-repeat: no-repeat;
+  padding-right: 3rem;
+  margin-bottom: 3rem;
+}
 @media screen and(min-width:1024px) {
   .list--tick .list__item {
     font-size: 1.8;
@@ -146,35 +147,76 @@ h2 {
 
 /* plan section */
 
-.plan {
+.block-plan {
   display: grid;
-  max-width: 57vw;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+  gap: 8rem 6rem;
+  justify-content: center;
+  margin-top: 5rem;
 }
+.plan {
+  font-size: 1.8rem;
+  transition: all 0.2s ease-in-out;
+}
+
 .card {
-  background-color: #ffa589;
+  background-color: var(--color-dark-secondary);
   overflow: hidden;
   border-radius: 20px;
   margin-bottom: 1rem;
+  box-shadow: 0px 0px 20px 10px #eeeded;
 }
+
 .header,
 .body-card {
   padding: 3rem 2.5rem;
 }
 
 .header {
+  color: var(--color-white);
   background-color: var(--color-dark-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header-badge {
+  margin-bottom: 2rem;
+}
+
+.card-price {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 .body-card {
+  height: 43.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--color-black-secondary);
   background-color: var(--color-light-secondary);
 }
-
-@media screen and (min-width: 1024px) {
-  .plan {
-    grid-template-columns: repeat (3, 1fr);
-  }
+.card-btn {
+  margin-top: 10rem;
+  width: 100%;
 }
-
-p {
-  font-family: Vazir;
-  font-weight: 400;
+.header-badge {
+  display: flex;
+  justify-content: space-between;
+}
+.primary-card .header {
+  background-color: var(--color-second-primary);
+}
+.card-price {
+  font-weight: 700;
+}
+.plan-popular {
+  transform: scale(1.1);
+}
+.plan:hover {
+  transform: scale(1.05);
+}
+@media screen and(min-width:1024px) {
+  .plan {
+    font-size: 108rem;
+  }
 }
