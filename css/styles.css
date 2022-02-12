@@ -83,7 +83,7 @@ h2 {
 
 @media screen and (min-width: 1024px) {
   .btn--primary {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
   .btn--secondary {
     font-size: 2rem;
@@ -215,8 +215,37 @@ h2 {
 .plan:hover {
   transform: scale(1.05);
 }
+.featuer__img {
+  display: flex;
+  justify-content: center;
+}
+.featuer__img > img {
+  width: 70%;
+}
 @media screen and(min-width:1024px) {
   .plan {
     font-size: 108rem;
+  }
+  .featuer__img {
+    width: 100%;
+  }
+}
+
+/* featuer */
+
+.featuer {
+  display: grid;
+}
+.text__featuer .btn {
+  margin-top: 2rem;
+  padding: 1.5rem 2.5rem;
+}
+
+.featuer__title {
+  margin: 20px 0px;
+}
+@media screen and (min-width: 1024px) {
+  .featuer {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
